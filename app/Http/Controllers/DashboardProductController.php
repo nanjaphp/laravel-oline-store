@@ -8,13 +8,14 @@ use App\Models\Product;
 use App\Models\ProductGallery;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class DashboardProductController extends Controller
 {
     public function index()
     {
-        $products = Product::with(['galleries','category'])->get();
+        $products = Product::with(['galleries','category'])->where('users_id', Auth::user()->id)->get();
 
         return view('pages.dashboard-products',[
             'products' => $products

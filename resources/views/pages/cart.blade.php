@@ -65,7 +65,7 @@
                         <div class="product-subtitle">USD</div>
                       </td>
                       <td style="width: 20%;">
-                        <form action="{{ route('cart-delete', $cart->products_id) }}" method="POST">
+                        <form action="{{ route('cart-delete', $cart->id) }}" method="POST">
                           @method('DELETE')
                           @csrf
                           <button class="btn btn-remove-cart" type="submit">
@@ -88,7 +88,7 @@
               <h2 class="mb-4">Деталі доставки</h2>
             </div>
           </div>
-          <form action="{{ route('checkout') }}" method="POST" enctype="multipart/form-data">
+          <form action="{{ route('submit-order') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="total_price" value="{{ $totalPrice }}">
             <div class="row mb-2" data-aos="fade-up" data-aos-delay="200" id="locations">
@@ -201,7 +201,7 @@
                   type="submit"
                   class="btn btn-success mt-4 px-4 btn-block"
                 >
-                  Checkout Now
+                  Підтвердити замовлення
                 </button>
               </div>
             </div>

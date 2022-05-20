@@ -29,7 +29,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/cart', 'CartController@index')->name('cart');
     Route::delete('/cart/{id}', 'CartController@delete')->name('cart-delete');
 
-    Route::post('/checkout', 'CheckoutController@process')->name('checkout');
+//    Route::post('/checkout', 'CheckoutController@process')->name('checkout');
+
+    Route::post('/submit-order', 'CheckoutController@submitOrder')->name('submit-order');
 
     Route::get('/dashboard', 'DashboardController@index')
         ->name('dashboard');

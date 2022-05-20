@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Transaction;
+use App\Models\TransactionAddress;
 use App\Models\TransactionDetail;
 use Exception;
 use Illuminate\Http\Request;
@@ -14,6 +15,57 @@ use Midtrans\Snap;
 
 class CheckoutController extends Controller
 {
+    public function submitOrder(Request $request)
+    {
+        $user = Auth::user();
+        $carts = Cart::with(['product'])
+            ->where('users_id', Auth::user()->id)
+            ->get();
+
+
+
+        $transaction = Transaction::create([
+            'users_id' => $user->id,
+            'inscurance_price' => 0,
+            'shipping_price' => 0,
+            'total_price' => $request->total_price,
+            'transaction_status' => 'PENDING',
+        ]);
+
+        TransactionAddress::create([
+            'transactions_id' => $transaction->id,
+            'address_one' => $request->address_one,
+            'address_two' => $request->address_two,
+            'regions_id' => $request->regions_id,
+            'cities_id' => $request->cities_id,
+            'zip_code' => $request->zip_code,
+            'country' => $request->country,
+            'phone_number' => $request->phone_number,
+        ]);
+
+        $txCode = "$user->id-$transaction->id-".mt_rand(0000,9999);
+        $transaction->update(['code' => $txCode]);
+
+        $i = 0;
+
+        foreach ($carts as $cart) {
+            $trx = "$txCode-$i";
+
+            TransactionDetail::create([
+                'transactions_id' => $transaction->id,
+                'products_id' => $cart->product->id,
+                'price' => $cart->product->price,
+                'shipping_status' => 'PENDING',
+                'code' => $trx
+            ]);
+            $i++;
+        }
+
+        Cart::where('users_id', $user->id)->delete();
+
+        return redirect()->route('home');
+    }
+
     public function process(Request $request)
     {
         // TODO: Save users data

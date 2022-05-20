@@ -20,7 +20,7 @@ class CreateTransactionDetailsTable extends Migration
             $table->unsignedBigInteger('products_id');
             $table->float('price');
             $table->string('shipping_status'); // PENDING/SHIPPING/SUCCESS
-            $table->string('code');
+            $table->string('code')->nullable();
             $table->timestamps();
 
             $table->foreign('transactions_id')->references('id')->on('transactions')->onDelete('cascade');
