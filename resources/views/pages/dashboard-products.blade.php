@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Панель продукту
+    Панель товару
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
           >
             <div class="container-fluid">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">Мої продукти</h2>
+                <h2 class="dashboard-title">Мої товари</h2>
                 <p class="dashboard-subtitle">
                     Добре керуйте цим і отримуйте гроші
                 </p>

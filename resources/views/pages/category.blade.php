@@ -78,7 +78,7 @@
                             {{ $product->name }}
                         </div>
                         <div class="products-price">
-                            ${{ $product->price }}
+                            грн {{ $product->price }}
                         </div>
                     </a>
                 </div>

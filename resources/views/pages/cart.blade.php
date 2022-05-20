@@ -69,7 +69,7 @@
                           @method('DELETE')
                           @csrf
                           <button class="btn btn-remove-cart" type="submit">
-                            Remove
+                            Видалити
                           </button>
                         </form>
                       </td>
@@ -94,7 +94,7 @@
             <div class="row mb-2" data-aos="fade-up" data-aos-delay="200" id="locations">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="address_one">Address 1</label>
+                  <label for="address_one">Адреса 1</label>
                   <input
                     type="text"
                     class="form-control"
@@ -106,7 +106,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="address_two">Address 2</label>
+                  <label for="address_two">Адреса 2</label>
                   <input
                     type="text"
                     class="form-control"
@@ -118,7 +118,7 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label for="regions_id">Province</label>
+                  <label for="regions_id">Область</label>
                   <select name="regions_id" id="regions_id" class="form-control" v-model="region_id" v-if="regions">
                     <option v-for="region in regions" :value="region.id">@{{ region.name }}</option>
                   </select>
