@@ -12,10 +12,8 @@
     >
     <div class="container-fluid">
         <div class="dashboard-heading">
-            <h2 class="dashboard-title">Product Gallery</h2>
-            <p class="dashboard-subtitle">
-                List of Gallery
-            </p>
+            <h2 class="dashboard-title">Галерея товарів</h2>
+            <p class="dashboard-subtitle">Список галереї</p>
         </div>
         <div class="dashboard-content">
             <div class="row">
@@ -23,16 +21,16 @@
                     <div class="card">
                         <div class="card-body">
                             <a href="{{  route('product-gallery.create') }}" class="btn btn-primary mb-3">
-                                + Tambah Galeri Baru
+                                + Додати нову галерею
                             </a>
                             <div class="table-responsive">
                                 <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Produk</th>
-                                        <th>Foto</th>
-                                        <th>Aksi</th>
+                                        <th>Товар</th>
+                                        <th>Зображення</th>
+                                        <th>Дія</th>
                                     </tr>
                                     </thead>
                                     <tbody></tbody>

@@ -38,7 +38,7 @@ data-aos="fade-up"
                 Дохід
             </div>
             <div class="dashboard-card-subtitle">
-                грн{{ number_format($revenue) }}
+                ₴{{ number_format($revenue) }}
             </div>
             </div>
         </div>

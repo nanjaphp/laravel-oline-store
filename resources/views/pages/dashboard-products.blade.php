@@ -23,7 +23,7 @@
                     <a
                       href="{{ route('dashboard-product-create') }}"
                       class="btn btn-success"
-                      >Додати новий продукт</a
+                      >Додати новий товару</a
                     >
                   </div>
                 </div>

@@ -12,9 +12,9 @@
     >
     <div class="container-fluid">
         <div class="dashboard-heading">
-            <h2 class="dashboard-title">Admin Dashboard</h2>
+            <h2 class="dashboard-title">Адмін панель</h2>
             <p class="dashboard-subtitle">
-                This is BWAStore Administrator Panel
+                Панель адміністратора
             </p>
         </div>
         <div class="dashboard-content">
@@ -23,7 +23,7 @@
                     <div class="card mb-2">
                         <div class="card-body">
                             <div class="dashboard-card-title">
-                                Customer
+                                Клієнти
                             </div>
                             <div class="dashboard-card-subtitle">
                                 {{ $customer }}
@@ -35,7 +35,7 @@
                     <div class="card mb-2">
                         <div class="card-body">
                             <div class="dashboard-card-title">
-                                Revenue
+                                Дохід
                             </div>
                             <div class="dashboard-card-subtitle">
                                 ${{ $revenue }}
@@ -47,7 +47,7 @@
                     <div class="card mb-2">
                         <div class="card-body">
                             <div class="dashboard-card-title">
-                                Transaction
+                                Транзакція
                             </div>
                             <div class="dashboard-card-subtitle">
                                 {{ $transaction }}

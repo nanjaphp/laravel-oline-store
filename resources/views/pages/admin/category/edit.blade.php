@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-        <h2 class="dashboard-title">Category</h2>
+        <h2 class="dashboard-title">Категорія</h2>
         <p class="dashboard-subtitle">
-            Edit "{{ $item->name }}" Category
+            Редагувати "{{ $item->name }}" категорію
         </p>
     </div>
     <div class="dashboard-content">
@@ -37,7 +37,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Nama Kategori</label>
+                      <label>Назва категорії</label>
                       <input type="text" class="form-control" name="name" required value="{{ $item->name }}"/>
                     </div>
                   </div>
@@ -54,7 +54,7 @@
                       type="submit"
                       class="btn btn-success px-5"
                     >
-                      Save Now
+                      Зберегти
                     </button>
                   </div>
               </div>

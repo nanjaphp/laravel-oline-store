@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Інформація про продукт на інформаційній панелі магазину
+    Інформація про товар на інформаційній панелі магазину
 @endsection
 
 @section('content')

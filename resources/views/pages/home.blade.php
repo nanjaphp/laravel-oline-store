@@ -97,7 +97,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
-                        <h5>Нові продукти</h5>
+                        <h5>Нові товари</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -125,7 +125,7 @@
                                     {{  $product->name }}
                                 </div>
                                 <div class="products-price">
-                                    грн {{ $product->price }}
+                                    ₴{{ $product->price }}
                                 </div>
                             </a>
                         </div>
@@ -135,7 +135,7 @@
                                 data-aos="fade-up"
                                 data-aos-delay="100"
                             >
-                                Продуктів не знайдено
+                                Товарів не знайдено
                             </div>
                     @endforelse
                 </div>
