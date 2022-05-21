@@ -1,0 +1,73 @@
+version: '3.7'
+services:
+    store-nginx:
+        build:
+            context: ./dev
+            dockerfile: nginx.docker
+        volumes:
+            - ../:/app
+        depends_on:
+            - store-php-fpm
+        ports:
+            - "8080:80"
+
+    store-php-fpm:
+        build:
+            context: ./dev
+            dockerfile: php-fpm.docker
+        volumes:
+            - ../:/app
+        depends_on:
+            - store-mysql
+            - store-storage
+            - store-mailer
+
+    store-php-cli:
+        build:
+            context: ./dev
+            dockerfile: php-cli.docker
+        volumes:
+            - ../:/app
+            - composer:/root/.composer/cache
+        depends_on:
+            - store-mysql
+            - store-storage
+            - store-mailer
+        tty: true
+
+    store-mysql:
+        image: mysql
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: 'root'
+            MYSQL_USER: 'user'
+            MYSQL_PASSWORD: 'test'
+            MYSQL_DATABASE: 'database'
+
+    store-mailer:
+        image: mailhog/mailhog
+        ports:
+            - "8082:8025"
+
+    store-storage:
+        build:
+            context: ./dev
+            dockerfile: nginx.docker
+        volumes:
+            - ./storage:/app
+        ports:
+            - "8081:80"
+
+    store-storage-ftp:
+        image: stilliard/pure-ftpd
+        environment:
+            FTP_USER_NAME: app
+            FTP_USER_PASS: secret
+            FTP_USER_HOME: /app
+        volumes:
+            - ./storage/public:/app
+
+volumes:
+    store-mysql:
+    composer:
