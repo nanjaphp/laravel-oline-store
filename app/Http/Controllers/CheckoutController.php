@@ -31,7 +31,7 @@ class CheckoutController extends Controller
             'total_price' => $request->total_price,
             'transaction_status' => 'PENDING',
         ]);
-
+dump($transaction->id);
         TransactionAddress::create([
             'transactions_id' => $transaction->id,
             'address_one' => $request->address_one,

@@ -51,17 +51,11 @@
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
-                      <div class="product-title">Статус платежу</div>
-                      <div class="product-subtitle text-danger">
-                        {{ $transaction->transaction->transaction_status }}
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6">
                       <div class="product-title">
-                          Загальна кількість
+                          Вартість
                       </div>
                       <div class="product-subtitle">
-                        ${{ number_format($transaction->transaction->total_price) }}
+                        ${{ number_format($transaction->price) }}
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
@@ -98,13 +92,13 @@
                       <div class="col-12 col-md-6">
                         <div class="product-title">Область</div>
                         <div class="product-subtitle">
-                          {{ App\Models\Province::find($transaction->transaction->user->provinces_id)->name }}
+                          {{ App\Models\Region::find($transaction->transaction->address->region_id)->name }}
                         </div>
                       </div>
                       <div class="col-12 col-md-6">
                         <div class="product-title">Місто</div>
                         <div class="product-subtitle">
-                          {{ App\Models\Regency::find($transaction->transaction->user->regencies_id)->name }}
+                          {{ App\Models\City::find($transaction->transaction->address->city_id)->name }}
                         </div>
                       </div>
                       <div class="col-12 col-md-6">
@@ -115,6 +109,7 @@
                         <div class="product-title">Країна</div>
                         <div class="product-subtitle">{{ $transaction->transaction->user->country }}</div>
                       </div>
+                        @if (\App\Models\Product::find($transaction->products_id)->users_id === \Illuminate\Support\Facades\Auth::user()->id)
                       <div class="col-12 col-md-3">
                         <div class="product-title">Статус достаки</div>
                         <select
@@ -128,14 +123,30 @@
                           <option value="SUCCESS">Success</option>
                         </select>
                       </div>
+                        @else
+                            <div class="col-12 col-md-3">
+                                <div class="product-title">Статус достаки</div>
+                                <select
+                                    name="shipping_status"
+                                    id="status"
+                                    class="form-control"
+                                    v-model="status"
+                                    disabled
+                                >
+                                    <option value="PENDING">Pending</option>
+                                    <option value="SHIPPING">Shipping</option>
+                                    <option value="SUCCESS">Success</option>
+                                </select>
+                            </div>
+                        @endif
                       <template v-if="status == 'SHIPPING'">
                         <div class="col-md-3">
                           <div class="product-title">Input Resi</div>
                           <input
                             type="text"
                             class="form-control"
-                            name="resi"
-                            v-model="resi"
+                            name="mail_id"
+                            v-model="mail_id"
                           />
                         </div>
                         <div class="col-md-2">
@@ -177,7 +188,7 @@
       el: "#transactionDetails",
       data: {
         status: "{{ $transaction->shipping_status }}",
-        resi: "{{ $transaction->resi }}",
+        mail_id: "{{ $transaction->mail_id }}",
       },
     });
   </script>

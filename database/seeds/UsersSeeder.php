@@ -18,7 +18,7 @@ class UsersSeeder extends Seeder
     {
         $emails = [];
 
-        for ($i = 1; $i <= 10; $i++) {
+        for ($i = 1; $i <= 16; $i++) {
             $emails[] = "test_user$i@mail.com";
         }
 

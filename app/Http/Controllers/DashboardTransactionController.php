@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transaction;
 use App\Models\TransactionDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,7 +28,7 @@ class DashboardTransactionController extends Controller
 
     public function details(Request $request, $id)
     {
-        $transaction = TransactionDetail::with(['transaction.user','product.galleries'])
+        $transaction = TransactionDetail::with(['transaction.user','product.galleries', 'transaction.address'])
                             ->findOrFail($id);
         return view('pages.dashboard-transactions-details',[
             'transaction' => $transaction
