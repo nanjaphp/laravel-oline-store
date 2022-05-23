@@ -169,8 +169,8 @@
         },
         methods: {
             updateRegionAndCity() {
-                this.region_id = {{$user->region_id ?? null}};
-                this.city_id = {{$user->city_id ?? null}};
+                this.region_id = {{$user->region_id ?? 'null'}};
+                this.city_id = {{$user->city_id ?? 'null'}};
             },
           getProvincesData() {
             var self = this;
