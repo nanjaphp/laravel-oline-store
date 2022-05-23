@@ -19,24 +19,22 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-
             $table->longText('address_one')->nullable();
             $table->longText('address_two')->nullable();
-            $table->unsignedBigInteger('region_id')->nullable();
-            $table->unsignedBigInteger('city_id')->nullable();
             $table->integer('zip_code')->nullable();
             $table->string('phone_number')->nullable();
             $table->string('store_name')->nullable();
             $table->integer('categories_id')->nullable();
             $table->integer('store_status')->nullable();
             $table->string('roles')->default('USER');
-
-            $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade');
-            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
-
+            $table->unsignedBigInteger('region_id')->nullable();
+            $table->unsignedBigInteger('city_id')->nullable();
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade');
+            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
         });
     }
 

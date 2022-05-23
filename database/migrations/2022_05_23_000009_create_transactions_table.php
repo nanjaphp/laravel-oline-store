@@ -16,16 +16,17 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
 
-            $table->integer('users_id');
-            $table->integer('inscurance_price');
-            $table->integer('shipping_price');
-            $table->integer('total_price');
+            $table->unsignedBigInteger('users_id');
+            $table->float('inscurance_price');
+            $table->float('shipping_price');
+            $table->float('total_price');
             $table->string('transaction_status'); // UNPAID/PENDING/SUCCESS/FAILED
             $table->string('resi');
             $table->string('code');
-
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
