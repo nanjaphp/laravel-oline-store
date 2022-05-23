@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Store Dashboard Transaction
+    Панель транзакцій магазину
 @endsection
 
 @section('content')
@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-      <h2 class="dashboard-title">Transactions</h2>
+      <h2 class="dashboard-title">Транзакії</h2>
       <p class="dashboard-subtitle">
-        Big result start from the small one
+          Великий результат починається з малого
       </p>
     </div>
     <div class="dashboard-content">
@@ -34,7 +34,7 @@
                 role="tab"
                 aria-controls="pills-home"
                 aria-selected="true"
-                >Sell Product</a
+                >Продати товар</a
               >
             </li>
             <li class="nav-item" role="presentation">
@@ -46,7 +46,7 @@
                 role="tab"
                 aria-controls="pills-profile"
                 aria-selected="false"
-                >Buy Product</a
+                >Купити товар</a
               >
             </li>
           </ul>

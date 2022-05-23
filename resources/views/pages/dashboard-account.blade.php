@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-  Account Settings
+    Налаштування аккаунта
 @endsection
 
 @section('content')
@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-      <h2 class="dashboard-title">My Account</h2>
+      <h2 class="dashboard-title">Мій аккаунт</h2>
       <p class="dashboard-subtitle">
-        Update your current profile
+          Оновіть свій профіль
       </p>
     </div>
     <div class="dashboard-content">
@@ -27,7 +27,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="name">Your Name</label>
+                      <label for="name">Ваше Ім'я</label>
                       <input
                         type="text"
                         class="form-control"
@@ -39,7 +39,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="email">Your Email</label>
+                      <label for="email">Ваша електронна адреса</label>
                       <input
                         type="email"
                         class="form-control"
@@ -84,7 +84,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="regencies_id">City</label>
+                      <label for="regencies_id">Місто</label>
                       <select name="regencies_id" id="regencies_id" class="form-control" v-model="regencies_id" v-if="regencies">
                         <option v-for="regency in regencies" :value="regency.id">@{{regency.name }}</option>
                       </select>
@@ -93,7 +93,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="zip_code">Postal Code</label>
+                      <label for="zip_code">Поштовий індекс</label>
                       <input
                         type="text"
                         class="form-control"
@@ -105,7 +105,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="country">Country</label>
+                      <label for="country">Країна</label>
                       <input
                         type="text"
                         class="form-control"
@@ -117,7 +117,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="phone_number">Mobile</label>
+                      <label for="phone_number">Номер телефону</label>
                       <input
                         type="text"
                         class="form-control"
@@ -134,7 +134,7 @@
                       type="submit"
                       class="btn btn-success px-5"
                     >
-                      Save Now
+                      Зберегти
                     </button>
                   </div>
                 </div>

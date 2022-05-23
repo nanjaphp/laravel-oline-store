@@ -17,14 +17,14 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="/index.html" class="nav-link">Home</a>
+              <a href="/index.html" class="nav-link">Домашня сторінка</a>
             </li>
             <li class="nav-item">
-              <a href="/categories.html" class="nav-link">Categories</a>
+              <a href="/categories.html" class="nav-link">Категорії</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Rewards</a>
-            </li>
+{{--            <li class="nav-item">--}}
+{{--              <a href="#" class="nav-link">Rewards</a>--}}
+{{--            </li>--}}
           </ul>
 
           <!-- Desktop Menu -->
@@ -45,12 +45,12 @@
                 Hi, Angga
               </a>
               <div class="dropdown-menu">
-                <a href="/dashboard.html" class="dropdown-item">Dashboard</a>
+                <a href="/dashboard.html" class="dropdown-item">Панель приладів</a>
                 <a href="/dashboard-account.html" class="dropdown-item"
                   >Settings</a
                 >
                 <div class="dropdown-divider"></div>
-                <a href="/" class="dropdown-item">Logout</a>
+                <a href="/" class="dropdown-item">Вийти</a>
               </div>
             </li>
             <li class="nav-item">
@@ -63,12 +63,12 @@
           <ul class="navbar-nav d-block d-lg-none">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                Hi, Angga
+                Привіт, НИКНЕЙМ
               </a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link d-inline-block">
-                Cart
+                Кошик
               </a>
             </li>
           </ul>

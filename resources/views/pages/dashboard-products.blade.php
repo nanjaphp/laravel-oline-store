@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Store Dashboard Product
+    Панель продукту
 @endsection
 
 @section('content')
@@ -12,9 +12,9 @@
           >
             <div class="container-fluid">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">My Products</h2>
+                <h2 class="dashboard-title">Мої продукти</h2>
                 <p class="dashboard-subtitle">
-                  Manage it well and get money
+                    Добре керуйте цим і отримуйте гроші
                 </p>
               </div>
               <div class="dashboard-content">
@@ -23,7 +23,7 @@
                     <a
                       href="{{ route('dashboard-product-create') }}"
                       class="btn btn-success"
-                      >Add New Product</a
+                      >Додати новий продукт</a
                     >
                   </div>
                 </div>

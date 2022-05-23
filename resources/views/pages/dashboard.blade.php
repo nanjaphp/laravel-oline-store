@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Store Dashboard
+    Панель
 @endsection
 
 @section('content')
@@ -12,9 +12,9 @@ data-aos="fade-up"
 >
 <div class="container-fluid">
     <div class="dashboard-heading">
-    <h2 class="dashboard-title">Dashboard</h2>
+    <h2 class="dashboard-title">Панель </h2>
     <p class="dashboard-subtitle">
-        Look what you have made today!
+        Подивіться, що ви зробили сьогодні!
     </p>
     </div>
     <div class="dashboard-content">
@@ -23,7 +23,7 @@ data-aos="fade-up"
         <div class="card mb-2">
             <div class="card-body">
             <div class="dashboard-card-title">
-                Customer
+                Клієнти
             </div>
             <div class="dashboard-card-subtitle">
                 {{ number_format($customer) }}
@@ -35,7 +35,7 @@ data-aos="fade-up"
         <div class="card mb-2">
             <div class="card-body">
             <div class="dashboard-card-title">
-                Revenue
+                Дохід
             </div>
             <div class="dashboard-card-subtitle">
                 ${{ number_format($revenue) }}
@@ -47,7 +47,7 @@ data-aos="fade-up"
         <div class="card mb-2">
             <div class="card-body">
             <div class="dashboard-card-title">
-                Transaction
+                Транзакція
             </div>
             <div class="dashboard-card-subtitle">
                 {{ number_format($transaction_count) }}
@@ -58,7 +58,7 @@ data-aos="fade-up"
     </div>
     <div class="row mt-3">
         <div class="col-12 mt-2">
-            <h5 class="mb-3">Recent Transactions</h5>
+            <h5 class="mb-3">Останні транзакції</h5>
             @foreach ($transaction_data as $transaction)
               <a
                 href="{{ route('dashboard-transaction-details', $transaction->id) }}"
@@ -89,7 +89,7 @@ data-aos="fade-up"
                         </div>
                     </div>
                 </div>
-            </a>  
+            </a>
             @endforeach
         </div>
     </div>
