@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Cart;
+use App\Models\Cart;
+use App\Models\Product;
 use Illuminate\Http\Request;
-use App\Product;
-use App\Transaction;
 use Illuminate\Support\Facades\Auth;
 
 class DetailController extends Controller

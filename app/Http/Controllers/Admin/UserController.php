@@ -3,14 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
-use App\User;
-
 use App\Http\Requests\Admin\UserRequest;
-
-use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Storage;
+use App\Models\User;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
@@ -30,21 +24,21 @@ class UserController extends Controller
                     return '
                         <div class="btn-group">
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1" 
+                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1"
                                     type="button" id="action' .  $item->id . '"
-                                        data-toggle="dropdown" 
+                                        data-toggle="dropdown"
                                         aria-haspopup="true"
                                         aria-expanded="false">
-                                        Aksi
+                                        Дія
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="action' .  $item->id . '">
                                     <a class="dropdown-item" href="' . route('user.edit', $item->id) . '">
-                                        Sunting
+                                        Редагувати
                                     </a>
                                     <form action="' . route('user.destroy', $item->id) . '" method="POST">
                                         ' . method_field('delete') . csrf_field() . '
                                         <button type="submit" class="dropdown-item text-danger">
-                                            Hapus
+                                            Витерти
                                         </button>
                                     </form>
                                 </div>
@@ -128,7 +122,7 @@ class UserController extends Controller
         {
             $data['password'] =  bcrypt($request->password);
         }
-        else 
+        else
         {
             unset($data['password']);
         }

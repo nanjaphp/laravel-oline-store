@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Transaction;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -25,21 +25,21 @@ class TransactionController extends Controller
                     return '
                         <div class="btn-group">
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1" 
+                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1"
                                     type="button" id="action' .  $item->id . '"
-                                        data-toggle="dropdown" 
+                                        data-toggle="dropdown"
                                         aria-haspopup="true"
                                         aria-expanded="false">
-                                        Aksi
+                                        Дія
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="action' .  $item->id . '">
                                     <a class="dropdown-item" href="' . route('transaction.edit', $item->id) . '">
-                                        Sunting
+                                        Редагувати
                                     </a>
                                     <form action="' . route('transaction.destroy', $item->id) . '" method="POST">
                                         ' . method_field('delete') . csrf_field() . '
                                         <button type="submit" class="dropdown-item text-danger">
-                                            Hapus
+                                            Витерти
                                         </button>
                                     </form>
                                 </div>
@@ -94,7 +94,7 @@ class TransactionController extends Controller
     public function edit($id)
     {
         $item = Transaction::with(['user'])->findOrFail($id);
-        
+
         return view('pages.admin.transaction.edit',[
             'item' => $item
         ]);

@@ -39,3 +39,6 @@ storage-chmod:
 
 app-key:
 	docker-compose exec store-php-fpm php artisan key:generate
+
+app-shell:
+	docker compose exec store-php-cli bash

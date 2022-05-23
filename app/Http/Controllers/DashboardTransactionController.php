@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\TransactionDetail;
+use App\Models\TransactionDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,7 +18,7 @@ class DashboardTransactionController extends Controller
                             ->whereHas('transaction', function($transaction){
                                 $transaction->where('users_id', Auth::user()->id);
                             })->get();
-        
+
         return view('pages.dashboard-transactions',[
             'sellTransactions' => $sellTransactions,
             'buyTransactions' => $buyTransactions

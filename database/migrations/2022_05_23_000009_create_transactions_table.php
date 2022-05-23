@@ -21,7 +21,8 @@ class CreateTransactionsTable extends Migration
             $table->integer('shipping_price');
             $table->integer('total_price');
             $table->string('transaction_status'); // UNPAID/PENDING/SUCCESS/FAILED
-            $table->string('resi'); 
+            $table->string('resi');
+            $table->string('code');
 
             $table->softDeletes();
             $table->timestamps();

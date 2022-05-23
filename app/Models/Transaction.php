@@ -1,22 +1,23 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cart extends Model
+class Transaction extends Model
 {
     protected $fillable = [
-        'products_id', 'users_id'
+        'users_id',
+        'inscurance_price',
+        'shipping_price',
+        'total_price',
+        'transaction_status',
+        'code'
     ];
 
     protected $hidden = [
 
     ];
-
-    public function product(){
-        return $this->hasOne( Product::class, 'id', 'products_id' );
-    }
 
     public function user(){
         return $this->belongsTo( User::class, 'users_id', 'id');

@@ -3,16 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
-use App\Product;
-use App\Category;
-use App\User;
-
 use App\Http\Requests\Admin\ProductRequest;
-
-use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
 
 class ProductController extends Controller
@@ -32,9 +27,9 @@ class ProductController extends Controller
                     return '
                         <div class="btn-group">
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1" 
+                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1"
                                     type="button" id="action' .  $item->id . '"
-                                        data-toggle="dropdown" 
+                                        data-toggle="dropdown"
                                         aria-haspopup="true"
                                         aria-expanded="false">
                                         Aksi
@@ -69,7 +64,7 @@ class ProductController extends Controller
     {
         $users = User::all();
         $categories = Category::all();
-        
+
         return view('pages.admin.product.create',[
             'users' => $users,
             'categories' => $categories
@@ -115,7 +110,7 @@ class ProductController extends Controller
         $item = Product::with(['category','user'])->findOrFail($id);
         $users = User::all();
         $categories = Category::all();
-        
+
         return view('pages.admin.product.edit',[
             'item' => $item,
             'users' => $users,
