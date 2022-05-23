@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-  Store Settings
+    Налаштування магазину
 @endsection
 
 @section('content')
@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-      <h2 class="dashboard-title">Store Settings</h2>
+      <h2 class="dashboard-title">Налаштування магазину</h2>
       <p class="dashboard-subtitle">
-        Make store that profitable
+          Зробіть магазин прибутковим
       </p>
     </div>
     <div class="dashboard-content">
@@ -27,15 +27,15 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Nama Toko</label>
+                      <label>Назва магазину</label>
                       <input type="text" class="form-control" name="store_name" value="{{ $user->store_name }}"/>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Kategori</label>
+                      <label>Категорія</label>
                       <select name="categories_id" class="form-control">
-                        <option value="{{ $user->categories_id }}">Tidak diganti</option>
+                        <option value="{{ $user->categories_id }}">Не змінено</option>
                         @foreach ($categories as $categories)
                           <option value="{{ $categories->id }}">{{ $categories->name }}</option>
                         @endforeach
@@ -44,9 +44,9 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Store</label>
+                      <label>Магазин</label>
                       <p class="text-muted">
-                        Apakah anda juga ingin membuka toko?
+                          Ви теж хочете відкрити магазин?
                       </p>
                       <div
                         class="custom-control custom-radio custom-control-inline"
@@ -63,7 +63,7 @@
                           for="openStoreTrue"
                           class="custom-control-label"
                         >
-                          Buka
+                          Відчиненно
                         </label>
                       </div>
                       <div
@@ -81,7 +81,7 @@
                           for="openStoreFalse"
                           class="custom-control-label"
                         >
-                          Sementara Tutup
+                            Тимчасово зачинено
                         </label>
                       </div>
                     </div>
@@ -93,7 +93,7 @@
                       type="submit"
                       class="btn btn-success px-5"
                     >
-                      Save Now
+                      Зберегти
                     </button>
                   </div>
               </div>

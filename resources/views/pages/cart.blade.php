@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Store Cart Page
+    Кошик магазину
 @endsection
 
 @section('content')
@@ -18,10 +18,10 @@
               <nav>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item">
-                    <a href="/index.html">Home</a>
+                    <a href="/index.html">Домашня сторінка</a>
                   </li>
                   <li class="breadcrumb-item active">
-                    Cart
+                    Кошик
                   </li>
                 </ol>
               </nav>
@@ -37,10 +37,10 @@
               <table class="table table-borderless table-cart">
                 <thead>
                   <tr>
-                    <td>Image</td>
-                    <td>Name &amp; Seller</td>
-                    <td>Price</td>
-                    <td>Menu</td>
+                    <td>Зображення</td>
+                    <td>Назва | Продавець</td>
+                    <td>Ціна</td>
+                    <td>Меню</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -85,7 +85,7 @@
               <hr />
             </div>
             <div class="col-12">
-              <h2 class="mb-4">Shipping Details</h2>
+              <h2 class="mb-4">Деталі доставки</h2>
             </div>
           </div>
           <form action="{{ route('checkout') }}" method="POST" enctype="multipart/form-data">
