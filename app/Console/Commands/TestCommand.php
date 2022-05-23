@@ -8,7 +8,7 @@ class TestCommand extends Command
 {
     protected $signature = 'test:run';
 
-    protected $description = 'delete old change mail confirmations';
+    protected $description = '';
 
     public function __construct()
     {
