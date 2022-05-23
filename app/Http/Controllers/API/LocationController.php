@@ -9,13 +9,13 @@ use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
-    public function provinces(Request $request)
+    public function regions()
     {
         return Province::all();
     }
 
-    public function regencies(Request $request, $provinces_id)
+    public function cities($region_id)
     {
-        return Regency::where('province_id', $provinces_id)->get();
+        return Regency::where('region_id', $region_id)->get();
     }
 }
