@@ -118,18 +118,18 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label for="provinces_id">Province</label>
-                  <select name="provinces_id" id="provinces_id" class="form-control" v-model="provinces_id" v-if="provinces">
-                    <option v-for="province in provinces" :value="province.id">@{{ province.name }}</option>
+                  <label for="regions_id">Province</label>
+                  <select name="regions_id" id="regions_id" class="form-control" v-model="region_id" v-if="regions">
+                    <option v-for="region in regions" :value="region.id">@{{ region.name }}</option>
                   </select>
                   <select v-else class="form-control"></select>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label for="regencies_id">City</label>
-                  <select name="regencies_id" id="regencies_id" class="form-control" v-model="regencies_id" v-if="regencies">
-                    <option v-for="regency in regencies" :value="regency.id">@{{regency.name }}</option>
+                  <label for="cities_id">City</label>
+                  <select name="cities_id" id="cities_id" class="form-control" v-model="cities_id" v-if="cities">
+                    <option v-for="city in cities" :value="city.id">@{{city.name }}</option>
                   </select>
                   <select v-else class="form-control"></select>
                 </div>
@@ -216,39 +216,43 @@
     <script src="https://unpkg.com/vue-toasted"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-      var locations = new Vue({
-        el: "#locations",
-        mounted() {
-          this.getProvincesData();
-        },
-        data: {
-          provinces: null,
-          regencies: null,
-          provinces_id: null,
-          regencies_id: null,
-        },
-        methods: {
-          getProvincesData() {
-            var self = this;
-            axios.get('{{ route('api-provinces') }}')
-              .then(function (response) {
-                  self.provinces = response.data;
-              })
-          },
-          getRegenciesData() {
-            var self = this;
-            axios.get('{{ url('api/regencies') }}/' + self.provinces_id)
-              .then(function (response) {
-                  self.regencies = response.data;
-              })
-          },
-        },
-        watch: {
-          provinces_id: function (val, oldVal) {
-            this.regencies_id = null;
-            this.getRegenciesData();
-          },
-        }
-      });
+        var locations = new Vue({
+            el: "#locations",
+            mounted() {
+                this.getProvincesData();
+                this.updateRegionAndCity();
+            },
+            data: {
+                regions: null,
+                cities: null,
+                region_id: null,
+                city_id: null,
+            },
+            methods: {
+                updateRegionAndCity() {
+                    this.region_id = {{$user->region_id ?? 'null'}};
+                    this.city_id = {{$user->city_id ?? 'null'}};
+                },
+                getProvincesData() {
+                    var self = this;
+                    axios.get('{{ route('api-regions') }}')
+                        .then(function (response) {
+                            self.regions = response.data;
+                        })
+                },
+                getRegenciesData() {
+                    var self = this;
+                    axios.get('{{ url('api/cities') }}/' + self.region_id)
+                        .then(function (response) {
+                            self.cities = response.data;
+                        })
+                },
+            },
+            watch: {
+                region_id: function (val, oldVal) {
+                    this.getRegenciesData();
+                },
+            }
+        });
     </script>
 @endpush

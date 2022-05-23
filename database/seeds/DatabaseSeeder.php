@@ -1,5 +1,6 @@
 <?php
 
+use Database\Seeds\CategoriesSeeder;
 use Database\Seeds\CitiesSeeder;
 use Database\Seeds\RegionsSeeder;
 use Database\Seeds\UsersSeeder;
@@ -18,6 +19,7 @@ class DatabaseSeeder extends Seeder
             UsersSeeder::class,
             RegionsSeeder::class,
             CitiesSeeder::class,
+            CategoriesSeeder::class,
         ]);
     }
 }

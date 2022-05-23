@@ -159,7 +159,6 @@
         mounted() {
           this.getProvincesData();
           this.updateRegionAndCity();
-          console.log(this.city_id);
         },
         data: {
           regions: null,

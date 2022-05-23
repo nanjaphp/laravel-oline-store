@@ -11285,12 +11285,17 @@ footer p {
 }
 
 .component-categories {
-  background: #f4f4f4;
+  /*background: #f4f4f4;*/
   border-radius: 8px;
   padding: 30px 30px 10px 30px;
   margin-bottom: 20px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+.categories-image {
+    background: #f4f4f4;
+    border-radius: 50px;
 }
 
 .component-categories:hover {
