@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
-use Exception;
-use Midtrans\Snap;
 use App\Transaction;
-use Midtrans\Config;
 use App\TransactionDetail;
-use Midtrans\Notification;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Midtrans\Config;
+use Midtrans\Notification;
+use Midtrans\Snap;
 
 class CheckoutController extends Controller
 {
