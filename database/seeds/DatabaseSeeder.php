@@ -1,5 +1,8 @@
 <?php
 
+use Database\Seeds\CitiesSeeder;
+use Database\Seeds\RegionsSeeder;
+use Database\Seeds\UsersSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
+        $this->call([
+            UsersSeeder::class,
+            RegionsSeeder::class,
+            CitiesSeeder::class,
+        ]);
     }
 }

@@ -1,12 +1,11 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeds;
 
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Str;
 
 class UsersSeeder extends Seeder
 {
@@ -28,7 +27,7 @@ class UsersSeeder extends Seeder
                 'email'      => $email,
                 'name'  => "Test",
                 'password'   => Hash::make('test'),
-                'email_verified_at' => time(),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
             ];
 
             DB::table('users')->insert($user);
