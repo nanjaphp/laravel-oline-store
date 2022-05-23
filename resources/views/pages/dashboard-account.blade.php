@@ -168,14 +168,14 @@
         methods: {
           getProvincesData() {
             var self = this;
-            axios.get('{{ route('api-provinces') }}')
+            axios.get('{{ route('api-regions') }}')
               .then(function (response) {
                   self.provinces = response.data;
               })
           },
           getRegenciesData() {
             var self = this;
-            axios.get('{{ url('api/regencies') }}/' + self.provinces_id)
+            axios.get('{{ url('api/cities') }}/' + self.provinces_id)
               .then(function (response) {
                   self.regencies = response.data;
               })
