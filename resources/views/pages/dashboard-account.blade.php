@@ -51,7 +51,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="address_one">Address 1</label>
+                      <label for="address_one">Адреса 1</label>
                       <input
                         type="text"
                         class="form-control"
@@ -63,7 +63,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="address_two">Address 2</label>
+                      <label for="address_two">Адреса 2</label>
                       <input
                         type="text"
                         class="form-control"
@@ -75,18 +75,18 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="provinces_id">Province</label>
-                      <select name="provinces_id" id="provinces_id" class="form-control" v-model="provinces_id" v-if="provinces">
-                        <option v-for="province in provinces" :value="province.id">@{{ province.name }}</option>
+                      <label for="region_id">Область</label>
+                      <select name="region_id" id="region_id" class="form-control" v-model="region_id" v-if="regions">
+                        <option v-for="region in regions" :value="region.id">@{{ region.name }}</option>
                       </select>
                       <select v-else class="form-control"></select>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="regencies_id">Місто</label>
-                      <select name="regencies_id" id="regencies_id" class="form-control" v-model="regencies_id" v-if="regencies">
-                        <option v-for="regency in regencies" :value="regency.id">@{{regency.name }}</option>
+                      <label for="city_id">Місто</label>
+                      <select name="city_id" id="city_id" class="form-control" v-model="city_id" v-if="cities">
+                        <option v-for="city in cities" :value="city.id">@{{city.name }}</option>
                       </select>
                       <select v-else class="form-control"></select>
                     </div>
@@ -103,18 +103,18 @@
                       />
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="country">Країна</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="country"
-                        name="country"
-                        value="{{ $user->country }}"
-                      />
-                    </div>
-                  </div>
+{{--                  <div class="col-md-6">--}}
+{{--                    <div class="form-group">--}}
+{{--                      <label for="country">Країна</label>--}}
+{{--                      <input--}}
+{{--                        type="text"--}}
+{{--                        class="form-control"--}}
+{{--                        id="country"--}}
+{{--                        name="country"--}}
+{{--                        value="{{ $user->country }}"--}}
+{{--                      />--}}
+{{--                    </div>--}}
+{{--                  </div>--}}
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="phone_number">Номер телефону</label>
@@ -158,32 +158,37 @@
         el: "#locations",
         mounted() {
           this.getProvincesData();
+          this.updateRegionAndCity();
+          console.log(this.city_id);
         },
         data: {
-          provinces: null,
-          regencies: null,
-          provinces_id: null,
-          regencies_id: null,
+          regions: null,
+          cities: null,
+          region_id: null,
+          city_id: null,
         },
         methods: {
+            updateRegionAndCity() {
+                this.region_id = {{$user->region_id ?? null}};
+                this.city_id = {{$user->city_id ?? null}};
+            },
           getProvincesData() {
             var self = this;
-            axios.get('{{ route('api-provinces') }}')
+            axios.get('{{ route('api-regions') }}')
               .then(function (response) {
-                  self.provinces = response.data;
+                  self.regions = response.data;
               })
           },
           getRegenciesData() {
             var self = this;
-            axios.get('{{ url('api/regencies') }}/' + self.provinces_id)
+            axios.get('{{ url('api/cities') }}/' + self.region_id)
               .then(function (response) {
-                  self.regencies = response.data;
+                  self.cities = response.data;
               })
           },
         },
         watch: {
-          provinces_id: function (val, oldVal) {
-            this.regencies_id = null;
+          region_id: function (val, oldVal) {
             this.getRegenciesData();
           },
         }
