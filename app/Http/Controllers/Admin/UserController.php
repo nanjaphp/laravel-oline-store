@@ -3,14 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
-use App\User;
-
 use App\Http\Requests\Admin\UserRequest;
-
-use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Storage;
+use App\Models\User;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller

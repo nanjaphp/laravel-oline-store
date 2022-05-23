@@ -3,12 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
-use App\ProductGallery;
-use App\Product;
-
 use App\Http\Requests\Admin\ProductGalleryRequest;
-
+use App\Models\Product;
+use App\Models\ProductGallery;
 use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -29,9 +26,9 @@ class ProductGalleryController extends Controller
                     return '
                         <div class="btn-group">
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1" 
+                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1"
                                     type="button" id="action' .  $item->id . '"
-                                        data-toggle="dropdown" 
+                                        data-toggle="dropdown"
                                         aria-haspopup="true"
                                         aria-expanded="false">
                                         Aksi
@@ -65,7 +62,7 @@ class ProductGalleryController extends Controller
     public function create()
     {
         $products = Product::all();
-        
+
         return view('pages.admin.product-gallery.create',[
             'products' => $products
         ]);

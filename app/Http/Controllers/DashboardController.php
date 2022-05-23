@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\TransactionDetail;
-use App\User;
-use Illuminate\Http\Request;
+use App\Models\TransactionDetail;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller

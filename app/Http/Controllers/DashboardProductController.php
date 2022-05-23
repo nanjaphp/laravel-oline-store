@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\Product;
-use App\Category;
-use App\ProductGallery;
-use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use App\Http\Requests\Admin\ProductRequest;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\ProductGallery;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class DashboardProductController extends Controller
 {
