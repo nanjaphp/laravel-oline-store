@@ -17,14 +17,14 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a href="{{  route('home') }}" class="nav-link">Home</a>
+              <a href="{{  route('home') }}" class="nav-link">Домашня сторінка</a>
             </li>
             <li class="nav-item">
-              <a href="{{  route('categories') }}" class="nav-link">Categories</a>
+              <a href="{{  route('categories') }}" class="nav-link">Категорії</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Rewards</a>
-            </li>
+{{--            <li class="nav-item">--}}
+{{--              <a href="#" class="nav-link">Rewards</a>--}}
+{{--            </li>--}}
           </ul>
         </div>
       </div>

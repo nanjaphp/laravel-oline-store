@@ -23,6 +23,7 @@
         <!-- Sidebar -->
         <div class="border-right" id="sidebar-wrapper">
           <div class="sidebar-heading text-center">
+              <a href="{{ route('home') }}" class="navbar-brand">
             <img src="/images/dashboard-store-logo.svg" alt="" class="my-4" />
           </div>
           <div class="list-group list-group-flush">
@@ -30,31 +31,31 @@
               href="{{ route('dashboard') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard')) ? 'active' : '' }} "
             >
-              Dashboard
+              Панель
             </a>
             <a
               href="{{ route('dashboard-product') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard/products*')) ? 'active' : '' }} "
             >
-              My Products
+              Мої продукти
             </a>
             <a
               href="{{ route('dashboard-transaction') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard/transactions*')) ? 'active' : '' }} "
             >
-              Transactions
+              Транзакції
             </a>
             <a
               href="{{ route('dashboard-settings-store') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard/settings*')) ? 'active' : '' }} "
             >
-              Store Settings
+              Налаштування магазину
             </a>
             <a
               href="{{ route('dashboard-settings-account') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard/account*')) ? 'active' : '' }} "
             >
-              My Account
+              Мій аккаунт
             </a>
             <a
                href="{{ route('logout') }}"
@@ -62,7 +63,7 @@
                         document.getElementById('logout-form').submit();"
                class="list-group-item list-group-item-action"
             >
-              Sign Out
+              Вийти з аккаунту
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
@@ -81,7 +82,7 @@
                 class="btn btn-secondary d-md-none mr-auto mr-2"
                 id="menu-toggle"
               >
-                &laquo; Menu
+                &laquo; Меню
               </button>
               <button
                 class="navbar-toggler"
@@ -107,17 +108,17 @@
                             alt=""
                             class="rounded-circle mr-2 profile-picture"
                         />
-                        Hi, {{ Auth::user()->name }}
+                        Привіт, {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu">
-                        <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
+                        <a href="{{ route('dashboard') }}" class="dropdown-item">Панель</a>
                         <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item">
-                            Settings
+                            Налаштування
                         </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            Logout
+                            Вийти
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
@@ -142,7 +143,7 @@
                 <ul class="navbar-nav d-block d-lg-none">
                     <li class="nav-item">
                         <a href="{{ route('dashboard') }}" class="nav-link">
-                            Hi, {{ Auth::user()->name }}
+                            Привіт, {{ Auth::user()->name }}
                         </a>
                     </li>
                     <li class="nav-item">
@@ -150,7 +151,7 @@
                             Cart
                         </a>
                     </li>
-                </ul>    
+                </ul>
               </div>
             </div>
           </nav>

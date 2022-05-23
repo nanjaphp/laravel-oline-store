@@ -8,22 +8,22 @@
             <div class="row align-items-center justify-content-center row-login">
                 <div class="col-lg-4">
                     <h2>
-                        Memulai untuk jual beli <br />
-                        dengan cara terbaru
+                        Почніть купувати та  <br />
+                        продавати найновішим способом
                     </h2>
                     <form class="mt-3" method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-group">
-                            <label>Full Name</label>
-                            <input 
+                            <label>Прізвище iм'я по-батькові</label>
+                            <input
                                 v-model="name"
-                                id="name" 
-                                type="text" 
-                                class="form-control @error('name') is-invalid @enderror" 
-                                name="name" 
-                                value="{{ old('name') }}" 
-                                required 
-                                autocomplete="name" 
+                                id="name"
+                                type="text"
+                                class="form-control @error('name') is-invalid @enderror"
+                                name="name"
+                                value="{{ old('name') }}"
+                                required
+                                autocomplete="name"
                                 autofocus
                             >
                             @error('name')
@@ -33,17 +33,17 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Email Address</label>
-                            <input 
+                            <label>Адреса електронної пошти</label>
+                            <input
                                 v-model="email"
                                 @change="checkForEmailAvailability()"
-                                id="email" 
-                                type="email" 
-                                class="form-control @error('email') is-invalid @enderror" 
+                                id="email"
+                                type="email"
+                                class="form-control @error('email') is-invalid @enderror"
                                 :class="{ 'is-invalid': this.email_unavailable }"
-                                name="email" 
-                                value="{{ old('email') }}" 
-                                required 
+                                name="email"
+                                value="{{ old('email') }}"
+                                required
                                 autocomplete="email"
                             >
                             @error('email')
@@ -53,13 +53,13 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
-                            <input 
-                                id="password" 
-                                type="password" 
-                                class="form-control @error('password') is-invalid @enderror" 
-                                name="password" 
-                                required 
+                            <label>Пароль</label>
+                            <input
+                                id="password"
+                                type="password"
+                                class="form-control @error('password') is-invalid @enderror"
+                                name="password"
+                                required
                                 autocomplete="new-password"
                             >
                             @error('password')
@@ -69,20 +69,20 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Konfirmasi Password</label>
-                            <input 
-                                id="password-confirm" 
-                                type="password" 
-                                class="form-control" 
-                                name="password_confirmation" 
-                                required 
+                            <label>Підтвердити пароль</label>
+                            <input
+                                id="password-confirm"
+                                type="password"
+                                class="form-control"
+                                name="password_confirmation"
+                                required
                                 autocomplete="new-password"
                             >
                         </div>
                         <div class="form-group">
-                            <label>Store</label>
+                            <label>Магазин</label>
                             <p class="text-muted">
-                                Apakah anda juga ingin membuka toko?
+                                Ви теж хочете відкрити магазин?
                             </p>
                             <div
                             class="custom-control custom-radio custom-control-inline"
@@ -96,7 +96,7 @@
                                     :value="true"
                                 />
                                 <label for="openStoreTrue" class="custom-control-label">
-                                    Iya, boleh
+                                    Так
                                 </label>
                             </div>
                             <div
@@ -111,21 +111,21 @@
                                     :value="false"
                                 />
                                 <label for="openStoreFalse" class="custom-control-label">
-                                    Enggak, makasih
+                                    Ні
                                 </label>
                             </div>
                         </div>
                         <div class="form-group" v-if="is_store_open">
-                            <label>Nama Toko</label>
-                            <input 
+                            <label>Назва магазину</label>
+                            <input
                                 v-model="store_name"
-                                id="store_name" 
-                                type="text" 
-                                class="form-control @error('store_name') is-invalid @enderror" 
-                                name="store_name" 
-                                value="{{ old('store_name') }}" 
-                                required 
-                                autocomplete="store_name" 
+                                id="store_name"
+                                type="text"
+                                class="form-control @error('store_name') is-invalid @enderror"
+                                name="store_name"
+                                value="{{ old('store_name') }}"
+                                required
+                                autocomplete="store_name"
                                 autofocus
                             >
                             @error('name')
@@ -135,7 +135,7 @@
                             @enderror
                         </div>
                         <div class="form-group" v-if="is_store_open">
-                            <label>Kategori</label>
+                            <label>Категорії</label>
                             <select name="category" class="form-control">
                                 <option value="" disabled>Select Category</option>
                                 @foreach ($categories as $category)
@@ -148,10 +148,10 @@
                             class="btn btn-success btn-block mt-4"
                             :disabled="this.email_unavailable"
                         >
-                            Sign Up Now
+                            Зареєструватися
                         </button>
                         <a href="{{ route('login') }}" class="btn btn-signup btn-block mt-2">
-                            Back to Sign In
+                            Назад до входу
                         </a>
                     </form>
                 </div>
@@ -172,7 +172,7 @@
         el: "#register",
         mounted() {
           AOS.init();
-       
+
         },
         methods: {
             checkForEmailAvailability: function () {
@@ -209,8 +209,8 @@
         },
         data() {
             return {
-                name: "Angga Hazza Sett",
-                email: "kamujagoan@bwa.id",
+                name: "Прізвище Ім'я По-батькові",
+                email: "fullname@gmail.com",
                 is_store_open: true,
                 store_name: "",
                 email_unavailable: false

@@ -14,7 +14,7 @@
     <div class="dashboard-heading">
       <h2 class="dashboard-title">#{{ $transaction->code }}</h2>
       <p class="dashboard-subtitle">
-        Transactions Details
+          Деталі транзакцій
       </p>
     </div>
     <div class="dashboard-content" id="transactionDetails">
@@ -33,32 +33,32 @@
                 <div class="col-12 col-md-8">
                   <div class="row">
                     <div class="col-12 col-md-6">
-                      <div class="product-title">Customer Name</div>
+                      <div class="product-title">Ім'я клієнта</div>
                       <div class="product-subtitle">{{ $transaction->transaction->user->name }}</div>
                     </div>
                     <div class="col-12 col-md-6">
-                      <div class="product-title">Product Name</div>
+                      <div class="product-title">Назва продукту</div>
                       <div class="product-subtitle">
                         {{ $transaction->product->name }}
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
                       <div class="product-title">
-                        Date of Transaction
+                          Дата транзакції
                       </div>
                       <div class="product-subtitle">
                         {{ $transaction->created_at }}
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
-                      <div class="product-title">Payment Status</div>
+                      <div class="product-title">Статус платежу</div>
                       <div class="product-subtitle text-danger">
                         {{ $transaction->transaction->transaction_status }}
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
                       <div class="product-title">
-                        Total Amount
+                          Загальна кількість
                       </div>
                       <div class="product-subtitle">
                         ${{ number_format($transaction->transaction->total_price) }}
@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-12 col-md-6">
                       <div class="product-title">
-                        Mobile
+                        Номер телефону
                       </div>
                       <div class="product-subtitle">
                         {{ $transaction->transaction->user->phone_number }}
@@ -79,7 +79,7 @@
                 @csrf
                 <div class="row">
                   <div class="col-12 mt-4">
-                    <h5>Shipping Information</h5>
+                    <h5>Інформація доставки</h5>
                   </div>
                   <div class="col-12">
                     <div class="row">
@@ -102,21 +102,21 @@
                         </div>
                       </div>
                       <div class="col-12 col-md-6">
-                        <div class="product-title">City</div>
+                        <div class="product-title">Місто</div>
                         <div class="product-subtitle">
                           {{ App\Models\Regency::find($transaction->transaction->user->regencies_id)->name }}
                         </div>
                       </div>
                       <div class="col-12 col-md-6">
-                        <div class="product-title">Postal Code</div>
+                        <div class="product-title">Індексний код</div>
                         <div class="product-subtitle">{{ $transaction->transaction->user->zip_code }}</div>
                       </div>
                       <div class="col-12 col-md-6">
-                        <div class="product-title">Country</div>
+                        <div class="product-title">Країна</div>
                         <div class="product-subtitle">{{ $transaction->transaction->user->country }}</div>
                       </div>
                       <div class="col-12 col-md-3">
-                        <div class="product-title">Shipping Status</div>
+                        <div class="product-title">Статус достаки</div>
                         <select
                           name="shipping_status"
                           id="status"
@@ -156,7 +156,7 @@
                       type="submit"
                       class="btn btn-success btn-lg mt-4"
                     >
-                      Save Now
+                      Зберегти
                     </button>
                   </div>
                 </div>

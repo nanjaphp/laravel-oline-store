@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Store Dashboard Product Detail
+    Створення продукту
 @endsection
 
 @section('content')
@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-      <h2 class="dashboard-title">Create Product</h2>
+      <h2 class="dashboard-title">Сторити продукт</h2>
       <p class="dashboard-subtitle">
-        Create your own product
+          Створіть власний продукт
       </p>
     </div>
     <div class="dashboard-content">
@@ -37,19 +37,19 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Product Name</label>
+                      <label>Назва продукту/label>
                       <input type="text" class="form-control" name="name"/>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Price</label>
+                      <label>Ціна</label>
                       <input type="number" class="form-control" name="price"/>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Kategori</label>
+                      <label>Категорії</label>
                       <select name="categories_id" class="form-control">
                         @foreach ($categories as $categories)
                           <option value="{{ $categories->id }}">{{ $categories->name }}</option>
@@ -59,16 +59,16 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Description</label>
+                      <label>Опис</label>
                       <textarea name="description" id="editor"></textarea>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Thumbnails</label>
+                      <label>Зображення</label>
                       <input type="file" name="photo" class="form-control" />
                       <p class="text-muted">
-                        Kamu dapat memilih lebih dari satu file
+                          Ви можете вибрати більше одного файлу
                       </p>
                     </div>
                   </div>
@@ -79,7 +79,7 @@
                       type="submit"
                       class="btn btn-success px-5"
                     >
-                      Save Now
+                      Зберегти
                     </button>
                   </div>
               </div>

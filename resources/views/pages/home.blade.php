@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Store Homepage
+    Домашня сторінка
 @endsection
 
 @section('content')
@@ -56,7 +56,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
-                        <h5>Trend Categories</h5>
+                        <h5>Трендові категорії</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -86,7 +86,7 @@
                             data-aos="fade-up"
                             data-aos-delay="100"
                         >
-                            No Categories Found
+                            Категорії не знайдено
                         </div>
                     @endforelse
                 </div>
@@ -97,7 +97,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
-                        <h5>New Products</h5>
+                        <h5>Нові продукти</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -135,7 +135,7 @@
                                 data-aos="fade-up"
                                 data-aos-delay="100"
                             >
-                                No Products Found
+                                Продуктів не знайдено
                             </div>
                     @endforelse
                 </div>
