@@ -12,6 +12,8 @@ class Transaction extends Model
         'shipping_price',
         'total_price',
         'transaction_status',
+        'code',
+        'resi',
         'code'
     ];
 
@@ -21,5 +23,13 @@ class Transaction extends Model
 
     public function user(){
         return $this->belongsTo( User::class, 'users_id', 'id');
+    }
+
+    public function address(){
+        return $this->hasOne( TransactionAddress::class, 'id', 'transactions_id');
+    }
+
+    public function detail(){
+        return $this->hasMany( TransactionDetail::class, 'id', 'transactions_id');
     }
 }

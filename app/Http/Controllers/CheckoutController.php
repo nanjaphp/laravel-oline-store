@@ -14,6 +14,46 @@ use Midtrans\Snap;
 
 class CheckoutController extends Controller
 {
+    public function submitOrder(Request $request)
+    {
+        $user = Auth::user();
+        $carts = Cart::with(['product'])
+            ->where('users_id', Auth::user()->id)
+            ->get();
+
+        $address = $request->except('total_price');
+
+        $transaction = Transaction::create([
+            'users_id' => $user->id,
+            'inscurance_price' => 0,
+            'shipping_price' => 0,
+            'total_price' => $request->total_price,
+            'transaction_status' => 'PENDING',
+        ]);
+
+        $txCode = "$user->id-$transaction->id-".mt_rand(0000,9999);
+        $transaction->update(['code' => $txCode]);
+
+        $i = 0;
+
+        foreach ($carts as $cart) {
+            $trx = "$txCode-$i";
+
+            TransactionDetail::create([
+                'transactions_id' => $transaction->id,
+                'products_id' => $cart->product->id,
+                'price' => $cart->product->price,
+                'shipping_status' => 'PENDING',
+                'code' => $trx
+            ]);
+            $i++;
+        }
+
+        Cart::where('users_id', $user->id)->delete();
+
+        return redirect()->route('home');
+    }
+
     public function process(Request $request)
     {
         // TODO: Save users data
