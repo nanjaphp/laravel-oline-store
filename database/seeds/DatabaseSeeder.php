@@ -2,6 +2,8 @@
 
 use Database\Seeds\CategoriesSeeder;
 use Database\Seeds\CitiesSeeder;
+use Database\Seeds\ProductGalleriesSeeder;
+use Database\Seeds\ProductsSeeder;
 use Database\Seeds\RegionsSeeder;
 use Database\Seeds\UsersSeeder;
 use Illuminate\Database\Seeder;
@@ -20,6 +22,8 @@ class DatabaseSeeder extends Seeder
             RegionsSeeder::class,
             CitiesSeeder::class,
             CategoriesSeeder::class,
+            ProductsSeeder::class,
+            ProductGalleriesSeeder::class,
         ]);
     }
 }

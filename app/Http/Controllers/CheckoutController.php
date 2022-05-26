@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Transaction;
+use App\Models\TransactionAddress;
 use App\Models\TransactionDetail;
 use Exception;
 use Illuminate\Http\Request;
@@ -21,7 +22,8 @@ class CheckoutController extends Controller
             ->where('users_id', Auth::user()->id)
             ->get();
 
-        $address = $request->except('total_price');
+//        $address = $request->except('total_price');
+//        TransactionAddress::create($address);exit;
 
         $transaction = Transaction::create([
             'users_id' => $user->id,
@@ -30,6 +32,8 @@ class CheckoutController extends Controller
             'total_price' => $request->total_price,
             'transaction_status' => 'PENDING',
         ]);
+
+        TransactionAddress::create($address);
 
         $txCode = "$user->id-$transaction->id-".mt_rand(0000,9999);
         $transaction->update(['code' => $txCode]);

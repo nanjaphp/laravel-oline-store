@@ -13,7 +13,7 @@ class CreateTransactionAddressTable extends Migration
      */
     public function up()
     {
-        Schema::create('transaction_address', function (Blueprint $table) {
+        Schema::create('transaction_addresses', function (Blueprint $table) {
             $table->id();
 
             $table->longText('address_one')->nullable();
