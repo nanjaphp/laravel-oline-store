@@ -22,8 +22,7 @@ class CheckoutController extends Controller
             ->where('users_id', Auth::user()->id)
             ->get();
 
-//        $address = $request->except('total_price');
-//        TransactionAddress::create($address);exit;
+
 
         $transaction = Transaction::create([
             'users_id' => $user->id,
@@ -33,7 +32,16 @@ class CheckoutController extends Controller
             'transaction_status' => 'PENDING',
         ]);
 
-        TransactionAddress::create($address);
+        TransactionAddress::create([
+            'transactions_id' => $transaction->id,
+            'address_one' => $request->address_one,
+            'address_two' => $request->address_two,
+            'regions_id' => $request->regions_id,
+            'cities_id' => $request->cities_id,
+            'zip_code' => $request->zip_code,
+            'country' => $request->country,
+            'phone_number' => $request->phone_number,
+        ]);
 
         $txCode = "$user->id-$transaction->id-".mt_rand(0000,9999);
         $transaction->update(['code' => $txCode]);
