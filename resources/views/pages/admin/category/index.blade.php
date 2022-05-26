@@ -12,9 +12,9 @@
     >
     <div class="container-fluid">
         <div class="dashboard-heading">
-            <h2 class="dashboard-title">Category</h2>
+            <h2 class="dashboard-title">Категорія</h2>
             <p class="dashboard-subtitle">
-                List of Categories
+                Список категорій
             </p>
         </div>
         <div class="dashboard-content">
@@ -23,17 +23,17 @@
                     <div class="card">
                         <div class="card-body">
                             <a href="{{  route('category.create') }}" class="btn btn-primary mb-3">
-                                + Tambah Kategori Baru
+                                + Додати нову категорію
                             </a>
                             <div class="table-responsive">
                                 <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nama</th>
-                                        <th>Foto</th>
-                                        <th>Slug</th>
-                                        <th>Aksi</th>
+                                        <th>Ім'я</th>
+                                        <th>Зоображення</th>
+                                        <th>Slug??</th>
+                                        <th>Дія</th>
                                     </tr>
                                     </thead>
                                     <tbody></tbody>

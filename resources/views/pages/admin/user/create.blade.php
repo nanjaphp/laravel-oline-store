@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-        <h2 class="dashboard-title">User</h2>
+        <h2 class="dashboard-title">Користувач</h2>
         <p class="dashboard-subtitle">
-            Create New User
+            Створити нового користувача
         </p>
     </div>
     <div class="dashboard-content">
@@ -36,28 +36,28 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Nama User</label>
+                      <label>Ім'я користувача</label>
                       <input type="text" class="form-control" name="name" required />
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Email User</label>
+                      <label>Пошта користувача</label>
                       <input type="text" class="form-control" name="email" required />
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Password User</label>
+                      <label>Пароль користувача</label>
                       <input type="text" class="form-control" name="password" required />
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Roles</label>
+                      <label>Роль</label>
                       <select name="roles" required class="form-control">
-                          <option value="ADMIN">Admin</option>
-                          <option value="USER">User</option>
+                          <option value="ADMIN">Адмін</option>
+                          <option value="USER">Користувач</option>
                         </select>
                     </div>
                   </div>
@@ -68,7 +68,7 @@
                       type="submit"
                       class="btn btn-success px-5"
                     >
-                      Save Now
+                      Зберігти
                     </button>
                   </div>
               </div>

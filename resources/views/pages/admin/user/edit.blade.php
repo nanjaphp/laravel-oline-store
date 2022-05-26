@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-        <h2 class="dashboard-title">User</h2>
+        <h2 class="dashboard-title">Користувач</h2>
         <p class="dashboard-subtitle">
-            Edit "{{ $item->name }}" User
+            Edit "{{ $item->name }}" Користувач
         </p>
     </div>
     <div class="dashboard-content">
@@ -37,7 +37,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Nama User</label>
+                      <label>Ім'я користувача</label>
                       <input type="text" class="form-control" name="name" value="{{ $item->name }}" required />
                     </div>
                   </div>
@@ -49,18 +49,18 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Password User</label>
+                      <label>Пароль користувача</label>
                       <input type="text" class="form-control" name="password" />
-                      <small>Kosongkan jika tidak ingin mengganti password</small>
+                      <small>Залиште поле порожнім, якщо ви не хочете змінювати пароль/small>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Roles</label>
+                      <label>Ролі</label>
                       <select name="roles" required class="form-control">
-                          <option value="{{ $item->roles }}" selected>Tidak diganti</option>
-                          <option value="ADMIN">Admin</option>
-                          <option value="USER">User</option>
+                          <option value="{{ $item->roles }}" selected>Не змінено</option>
+                          <option value="ADMIN">Адмін</option>
+                          <option value="USER">Користувач</option>
                         </select>
                     </div>
                   </div>
@@ -71,7 +71,7 @@
                       type="submit"
                       class="btn btn-success px-5"
                     >
-                      Save Now
+                      Зберегти
                     </button>
                   </div>
               </div>

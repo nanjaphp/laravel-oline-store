@@ -127,7 +127,7 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label for="cities_id">City</label>
+                  <label for="cities_id">Місто</label>
                   <select name="cities_id" id="cities_id" class="form-control" v-model="cities_id" v-if="cities">
                     <option v-for="city in cities" :value="city.id">@{{city.name }}</option>
                   </select>
@@ -136,7 +136,7 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label for="zip_code">Postal Code</label>
+                  <label for="zip_code">Індекс</label>
                   <input
                     type="text"
                     class="form-control"
@@ -148,7 +148,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="country">Country</label>
+                  <label for="country">Країна</label>
                   <input
                     type="text"
                     class="form-control"
@@ -160,13 +160,13 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="phone_number">Mobile</label>
+                  <label for="phone_number">Номер телефону</label>
                   <input
                     type="text"
                     class="form-control"
                     id="phone_number"
                     name="phone_number"
-                    value="+628 2020 11111"
+                    value="38 (000) 000 00 00"
                   />
                 </div>
               </div>
@@ -176,25 +176,25 @@
                 <hr />
               </div>
               <div class="col-12">
-                <h2 class="mb-1">Payment Informations</h2>
+                <h2 class="mb-1">Платіжна інформація</h2>
               </div>
             </div>
             <div class="row" data-aos="fade-up" data-aos-delay="200">
               <div class="col-4 col-md-2">
-                <div class="product-title">$0</div>
-                <div class="product-subtitle">Country Tax</div>
+                <div class="product-title">₴</div>
+                <div class="product-subtitle">Коміссія</div>
               </div>
-              <div class="col-4 col-md-3">
-                <div class="product-title">$0</div>
-                <div class="product-subtitle">Product Insurance</div>
-              </div>
+{{--              <div class="col-4 col-md-3">--}}
+{{--                <div class="product-title">$0</div>--}}
+{{--                <div class="product-subtitle">Product Insurance</div>--}}
+{{--              </div>--}}
+{{--              <div class="col-4 col-md-2">--}}
+{{--                <div class="product-title">$0</div>--}}
+{{--                <div class="product-subtitle">Ship to Jakarta</div>--}}
+{{--              </div>--}}
               <div class="col-4 col-md-2">
-                <div class="product-title">$0</div>
-                <div class="product-subtitle">Ship to Jakarta</div>
-              </div>
-              <div class="col-4 col-md-2">
-                <div class="product-title text-success">${{ number_format($totalPrice ?? 0) }}</div>
-                <div class="product-subtitle">Total</div>
+                <div class="product-title text-success">₴{{ number_format($totalPrice ?? 0) }}</div>
+                <div class="product-subtitle">Усього</div>
               </div>
               <div class="col-8 col-md-3">
                 <button

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Створення продукту
+    Створення товару
 @endsection
 
 @section('content')
@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-      <h2 class="dashboard-title">Сторити продукт</h2>
+      <h2 class="dashboard-title">Сторити товар</h2>
       <p class="dashboard-subtitle">
-          Створіть власний продукт
+          Створіть власний товар
       </p>
     </div>
     <div class="dashboard-content">
@@ -37,7 +37,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Назва продукту/label>
+                      <label>Назва товару</label>
                       <input type="text" class="form-control" name="name"/>
                     </div>
                   </div>

@@ -12,9 +12,9 @@
     >
     <div class="container-fluid">
         <div class="dashboard-heading">
-            <h2 class="dashboard-title">Product</h2>
+            <h2 class="dashboard-title">Продукт</h2>
             <p class="dashboard-subtitle">
-                List of Product
+                Список продуктів
             </p>
         </div>
         <div class="dashboard-content">
@@ -23,18 +23,18 @@
                     <div class="card">
                         <div class="card-body">
                             <a href="{{  route('product.create') }}" class="btn btn-primary mb-3">
-                                + Tambah Product Baru
+                                + Додати новий продукт
                             </a>
                             <div class="table-responsive">
                                 <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nama</th>
-                                        <th>Pemilik</th>
-                                        <th>Kategori</th>
-                                        <th>Harga</th>
-                                        <th>Aksi</th>
+                                        <th>Ім'я</th>
+                                        <th>Власник</th>
+                                        <th>Категорія</th>
+                                        <th>Ціна</th>
+                                        <th>Дія</th>
                                     </tr>
                                     </thead>
                                     <tbody></tbody>

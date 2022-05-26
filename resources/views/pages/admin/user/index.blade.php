@@ -14,7 +14,7 @@
         <div class="dashboard-heading">
             <h2 class="dashboard-title">User</h2>
             <p class="dashboard-subtitle">
-                List of User
+                Список користувачів
             </p>
         </div>
         <div class="dashboard-content">
@@ -23,17 +23,17 @@
                     <div class="card">
                         <div class="card-body">
                             <a href="{{  route('user.create') }}" class="btn btn-primary mb-3">
-                                + Tambah User Baru
+                                + Додати нового користувача
                             </a>
                             <div class="table-responsive">
                                 <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nama</th>
-                                        <th>Email</th>
-                                        <th>Roles</th>
-                                        <th>Aksi</th>
+                                        <th>Ім'я</th>
+                                        <th>Почта</th>
+                                        <th>Роль</th>
+                                        <th>Дія</th>
                                     </tr>
                                     </thead>
                                     <tbody></tbody>

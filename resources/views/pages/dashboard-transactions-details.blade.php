@@ -37,7 +37,7 @@
                       <div class="product-subtitle">{{ $transaction->transaction->user->name }}</div>
                     </div>
                     <div class="col-12 col-md-6">
-                      <div class="product-title">Назва продукту</div>
+                      <div class="product-title">Назва товару</div>
                       <div class="product-subtitle">
                         {{ $transaction->product->name }}
                       </div>

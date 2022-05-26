@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-        <h2 class="dashboard-title">Product</h2>
+        <h2 class="dashboard-title">Товар</h2>
         <p class="dashboard-subtitle">
-            Create New Product
+            Створити новий товар
         </p>
     </div>
     <div class="dashboard-content">
@@ -36,13 +36,13 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Nama Product</label>
+                      <label>Ім'я товару</label>
                       <input type="text" class="form-control" name="name" required />
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Pemilik Product</label>
+                      <label>Власник товару</label>
                       <select name="users_id" class="form-control">
                         @foreach ($users as $user)
                           <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -52,7 +52,7 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Kategori Product</label>
+                      <label>Категорія товару</label>
                       <select name="categories_id" class="form-control">
                         @foreach ($categories as $categories)
                           <option value="{{ $categories->id }}">{{ $categories->name }}</option>
@@ -62,13 +62,13 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Harga</label>
+                      <label>Ціна</label>
                       <input type="number" class="form-control" name="price" required />
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Deskripsi</label>
+                      <label>Опис</label>
                       <textarea name="description" id="editor"></textarea>
                     </div>
                   </div>
@@ -79,7 +79,7 @@
                       type="submit"
                       class="btn btn-success px-5"
                     >
-                      Save Now
+                      Зберегти
                     </button>
                   </div>
               </div>

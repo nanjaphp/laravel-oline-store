@@ -19,10 +19,10 @@
               </p>
               <div>
                 <a href="/dashboard.html" class="btn btn-success w-50 mt-4">
-                  My Dashboard
+                  Моя панель
                 </a>
                 <a href="/index.html" class="btn btn-signup w-50 mt-2">
-                  Go To Shopping
+                  Продовжити покупки
                 </a>
               </div>
             </div>
