@@ -13,8 +13,6 @@ class Transaction extends Model
         'total_price',
         'transaction_status',
         'code',
-        'resi',
-        'code'
     ];
 
     protected $hidden = [
@@ -26,7 +24,7 @@ class Transaction extends Model
     }
 
     public function address(){
-        return $this->hasOne( TransactionAddress::class, 'id', 'transactions_id');
+        return $this->hasOne( TransactionAddress::class, 'transactions_id', 'id');
     }
 
     public function detail(){

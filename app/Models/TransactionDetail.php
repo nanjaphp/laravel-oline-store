@@ -11,8 +11,8 @@ class TransactionDetail extends Model
         'products_id',
         'price',
         'shipping_status',
-        'resi',
-        'code'
+        'code',
+        'mail_id',
     ];
 
     protected $hidden = [

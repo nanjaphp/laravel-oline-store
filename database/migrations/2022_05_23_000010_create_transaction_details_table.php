@@ -21,6 +21,7 @@ class CreateTransactionDetailsTable extends Migration
             $table->float('price');
             $table->string('shipping_status'); // PENDING/SHIPPING/SUCCESS
             $table->string('code')->nullable();
+            $table->string('mail_id')->nullable();
             $table->timestamps();
 
             $table->foreign('transactions_id')->references('id')->on('transactions')->onDelete('cascade');
