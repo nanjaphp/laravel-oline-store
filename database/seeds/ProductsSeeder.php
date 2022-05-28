@@ -47,6 +47,46 @@ class ProductsSeeder extends Seeder
             ['id' => 27, 'name' => 'Puma 5', 'users_id' => 19, 'categories_id' => 8, 'price' => 1800.00, 'description' => '<p>Новий</p>', 'slug' => 'Puma 5'],
             ['id' => 28, 'name' => 'Puma 4', 'users_id' => 19, 'categories_id' => 8, 'price' => 1500.00, 'description' => '<p>Новий</p>', 'slug' => 'Puma 4'],
             ['id' => 29, 'name' => 'Adidas 1', 'users_id' => 19, 'categories_id' => 8, 'price' => 2000.00, 'description' => '<p>Новий</p>', 'slug' => 'Adidas 1'],
+
+//                ДІМ І САД
+            ['id' => 30, 'name' => "Комп'ютерний стіл 1", 'users_id' => 20, 'categories_id' => 8, 'price' => 8000.00, 'description' => '<p>Новий</p>', 'slug' => "Комп'ютерний стіл 1"],
+            ['id' => 31, 'name' => "Комп'ютерний стіл 2", 'users_id' => 20, 'categories_id' => 8, 'price' => 4000.00, 'description' => '<p>Новий</p>', 'slug' => "Комп'ютерний стіл 2"],
+            ['id' => 32, 'name' => "Комп'ютерний стіл 3", 'users_id' => 20, 'categories_id' => 8, 'price' => 4000.00, 'description' => '<p>Новий</p>', 'slug' => "Комп'ютерний стіл 3"],
+            ['id' => 33, 'name' => "Комп'ютерний стіл 4", 'users_id' => 20, 'categories_id' => 8, 'price' => 4000.00, 'description' => '<p>Новий</p>', 'slug' => "Комп'ютерний стіл 4"],
+            ['id' => 34, 'name' => "Комп'ютерний стіл 5", 'users_id' => 20, 'categories_id' => 8, 'price' => 3500.00, 'description' => '<p>Новий</p>', 'slug' => "Комп'ютерний стіл 5"],
+
+            ['id' => 35, 'name' => "Комп'ютерне крісло 1", 'users_id' => 20, 'categories_id' => 8, 'price' => 4000.00, 'description' => '<p>Новий</p>', 'slug' => "Комп'ютерне крісло 1"],
+            ['id' => 36, 'name' => "Комп'ютерне крісло 2", 'users_id' => 20, 'categories_id' => 8, 'price' => 3500.00, 'description' => '<p>Новий</p>', 'slug' => "Комп'ютерне крісло 2"],
+            ['id' => 37, 'name' => "Комп'ютерне крісло 3", 'users_id' => 20, 'categories_id' => 8, 'price' => 3000.00, 'description' => '<p>Новий</p>', 'slug' => "Комп'ютерне крісло 3"],
+
+            ['id' => 38, 'name' => 'Ліжко 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 10000.00, 'description' => '<p>Новий</p>', 'slug' => 'Ліжко 1'],
+            ['id' => 39, 'name' => 'Ліжко 2', 'users_id' => 20, 'categories_id' => 8, 'price' => 10000.00, 'description' => '<p>Новий</p>', 'slug' => 'Ліжко 2'],
+            ['id' => 40, 'name' => 'Ліжко 3', 'users_id' => 20, 'categories_id' => 8, 'price' => 9000.00, 'description' => '<p>Новий</p>', 'slug' => 'Ліжко 3'],
+
+            ['id' => 42, 'name' => 'Комод 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 4500.00, 'description' => '<p>Новий</p>', 'slug' => 'Комод 1'],
+            ['id' => 41, 'name' => 'Комод 2', 'users_id' => 20, 'categories_id' => 8, 'price' => 4500.00, 'description' => '<p>Новий</p>', 'slug' => 'Комод 2'],
+            ['id' => 43, 'name' => 'Комод 3', 'users_id' => 20, 'categories_id' => 8, 'price' => 4400.00, 'description' => '<p>Новий</p>', 'slug' => 'Комод 3'],
+
+            ['id' => 44, 'name' => 'Шкаф 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 8900.00, 'description' => '<p>Новий</p>', 'slug' => 'Шкаф 1'],
+            ['id' => 45, 'name' => 'Шкаф 2', 'users_id' => 20, 'categories_id' => 8, 'price' => 10000.00, 'description' => '<p>Новий</p>', 'slug' => 'Шкаф 2'],
+
+            ['id' => 46, 'name' => 'Тумба 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 10000.00, 'description' => '<p>Новий</p>', 'slug' => 'Тумба 1'],
+            ['id' => 47, 'name' => 'Тумба 2', 'users_id' => 20, 'categories_id' => 8, 'price' => 10000.00, 'description' => '<p>Новий</p>', 'slug' => 'Тумба 2'],
+
+            ['id' => 48, 'name' => 'Стінка 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 10000.00, 'description' => '<p>Новий</p>', 'slug' => 'Стінка 1'],
+            ['id' => 49, 'name' => 'Диван 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 13000.00, 'description' => '<p>Новий</p>', 'slug' => 'Диван 1'],
+
+//                АВТОМОБІЛИ
+            ['id' => 50, 'name' => 'Audi 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 500000.00, 'description' => '<p>Новий</p>', 'slug' => 'Audi 1'],
+            ['id' => 51, 'name' => 'Audi 2', 'users_id' => 20, 'categories_id' => 8, 'price' => 300000.00, 'description' => '<p>Новий</p>', 'slug' => 'Audi 2'],
+            ['id' => 52, 'name' => 'Dodge 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 600000.00, 'description' => '<p>Новий</p>', 'slug' => 'Dodge 1'],
+            ['id' => 53, 'name' => 'Hyundai 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 300000.00, 'description' => '<p>Новий</p>', 'slug' => 'Hyundai 1'],
+            ['id' => 54, 'name' => 'Jeep 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 550000.00, 'description' => '<p>Новий</p>', 'slug' => 'Jeep 1'],
+            ['id' => 55, 'name' => 'Kia 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 400000.00, 'description' => '<p>Новий</p>', 'slug' => 'Kia 1'],
+            ['id' => 56, 'name' => 'Mazda 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 440000.00, 'description' => '<p>Новий</p>', 'slug' => 'Mazda 1'],
+            ['id' => 57, 'name' => 'Toyota 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 390000.00, 'description' => '<p>Новий</p>', 'slug' => 'Toyota 1'],
+            ['id' => 58, 'name' => 'Volkswagen 1', 'users_id' => 20, 'categories_id' => 8, 'price' => 380000.00, 'description' => '<p>Новий</p>', 'slug' => 'Volkswagen 1'],
+            ['id' => 59, 'name' => 'Volkswagen 2', 'users_id' => 20, 'categories_id' => 8, 'price' => 400000.00, 'description' => '<p>Новий</p>', 'slug' => 'Volkswagen 2']
         ];
 
 
