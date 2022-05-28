@@ -36,7 +36,6 @@ class ProductsSeeder extends Seeder
             ['id' => 16, 'name' => 'Reebok 1', 'users_id' => 17, 'categories_id' => 8, 'price' => 2000.00, 'description' => '<p>Новий</p>', 'slug' => 'Reebok 1'],
             ['id' => 17, 'name' => 'Reebok 2', 'users_id' => 18, 'categories_id' => 8, 'price' => 2500.00, 'description' => '<p>Новий</p>', 'slug' => 'Reebok 2'],
             ['id' => 18, 'name' => 'Reebok 3', 'users_id' => 19, 'categories_id' => 8, 'price' => 2500.00, 'description' => '<p>Новий</p>', 'slug' => 'Reebok 3'],
-
             ['id' => 19, 'name' => 'Puma 13', 'users_id' => 19, 'categories_id' => 8, 'price' => 2800.00, 'description' => '<p>Новий</p>', 'slug' => 'Puma 13'],
             ['id' => 20, 'name' => 'Puma 12', 'users_id' => 19, 'categories_id' => 8, 'price' => 2800.00, 'description' => '<p>Новий</p>', 'slug' => 'Puma 12'],
             ['id' => 21, 'name' => 'Puma 11', 'users_id' => 19, 'categories_id' => 8, 'price' => 2800.00, 'description' => '<p>Новий</p>', 'slug' => 'Puma 11'],
@@ -47,7 +46,6 @@ class ProductsSeeder extends Seeder
             ['id' => 26, 'name' => 'Puma 6', 'users_id' => 19, 'categories_id' => 8, 'price' => 1800.00, 'description' => '<p>Новий</p>', 'slug' => 'Puma 6'],
             ['id' => 27, 'name' => 'Puma 5', 'users_id' => 19, 'categories_id' => 8, 'price' => 1800.00, 'description' => '<p>Новий</p>', 'slug' => 'Puma 5'],
             ['id' => 28, 'name' => 'Puma 4', 'users_id' => 19, 'categories_id' => 8, 'price' => 1500.00, 'description' => '<p>Новий</p>', 'slug' => 'Puma 4'],
-
             ['id' => 29, 'name' => 'Adidas 1', 'users_id' => 19, 'categories_id' => 8, 'price' => 2000.00, 'description' => '<p>Новий</p>', 'slug' => 'Adidas 1'],
         ];
 
