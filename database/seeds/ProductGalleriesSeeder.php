@@ -89,19 +89,6 @@ class ProductGalleriesSeeder extends Seeder
             ['id' => 58, 'photos' => 'public/images/volkswagen_1_1.webp', 'products_id' => 58],
             ['id' => 59, 'photos' => 'public/images/volkswagen_1_1.webp', 'products_id' => 59],
 
-//                ТВАРИНИ
-            ['id' => 60, 'photos' => 'public/images/1_dog_1.webp', 'products_id' => 60],
-            ['id' => 61, 'photos' => 'public/images/1_dog_2.webp', 'products_id' => 61],
-            ['id' => 62, 'photos' => 'public/images/1_dog_3.webp', 'products_id' => 62],
-            ['id' => 63, 'photos' => 'public/images/1_dog_4.webp', 'products_id' => 63],
-            ['id' => 64, 'photos' => 'public/images/1_dog_5.webp', 'products_id' => 64],
-            ['id' => 65, 'photos' => 'public/images/1_dog_6.webp', 'products_id' => 65],
-
-            ['id' => 66, 'photos' => 'public/images/2_cat_1.webp', 'products_id' => 66],
-            ['id' => 67, 'photos' => 'public/images/2_cat_2.webp', 'products_id' => 67],
-            ['id' => 68, 'photos' => 'public/images/2_cat_3.webp', 'products_id' => 68],
-            ['id' => 69, 'photos' => 'public/images/2_cats_3.webp', 'products_id' => 69],
-
 
         ];
 
