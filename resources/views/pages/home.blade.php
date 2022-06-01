@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Домашня сторінка
+    Головна сторінка
 @endsection
 
 @section('content')

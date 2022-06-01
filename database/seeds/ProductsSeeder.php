@@ -31,9 +31,7 @@ class ProductsSeeder extends Seeder
             ['id' => 14, 'name' => 'Iphone 6s neverlock', 'users_id' => 14, 'categories_id' => 7, 'price' => 3200.00, 'description' => '<p>Новий</p>', 'slug' => 'iphone-6s-neverlock13'],
             ['id' => 15, 'name' => 'Iphone 6s neverlock', 'users_id' => 15, 'categories_id' => 7, 'price' => 3200.00, 'description' => '<p>Новий</p>', 'slug' => 'iphone-6s-neverlock14'],
 
-
         ];
-
 
         DB::table('products')->insert($products);
     }
